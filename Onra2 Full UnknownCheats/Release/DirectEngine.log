@@ -1,0 +1,44 @@
+﻿  Base.cpp
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\drawelements.h(26): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\drawelements.h(35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\drawelements.h(47): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\drawelements.h(47): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\drawelements.h(132): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\drawelements.h(128): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\drawelements.h(129): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\drawelements.h(130): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\drawelements.h(131): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\drawelements.h(134): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\drawelements.h(135): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\drawelements.h(139): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\drawelements.h(140): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\drawelements.h(144): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\drawelements.h(145): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\drawelements.h(149): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\drawelements.h(150): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\classes.h(328): warning C4141: 'virtual': used more than once
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\classes.h(540): warning C4099: 'IGame': type name first seen using 'class' now seen using 'struct'
+  c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\classes.h(539): note: see declaration of 'IGame'
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\classes.h(1033): warning C4099: 'IActorSystem': type name first seen using 'class' now seen using 'struct'
+  c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\classes.h(1032): note: see declaration of 'IActorSystem'
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\classes.h(1053): warning C4099: 'IRenderer': type name first seen using 'class' now seen using 'struct'
+  c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\classes.h(1052): note: see declaration of 'IRenderer'
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\classes.h(1176): warning C4099: 'IEntitySystem': type name first seen using 'class' now seen using 'struct'
+  c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\classes.h(1175): note: see declaration of 'IEntitySystem'
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\classes.h(1344): warning C4099: 'IEntityClassRegistry': type name first seen using 'class' now seen using 'struct'
+  c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\classes.h(1343): note: see declaration of 'IEntityClassRegistry'
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\classes.h(1466): warning C4099: 'IEntity': type name first seen using 'class' now seen using 'struct'
+  c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\classes.h(1465): note: see declaration of 'IEntity'
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\classes.h(1730): warning C4099: 'IPhysicalWorld': type name first seen using 'class' now seen using 'struct'
+  c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\classes.h(1729): note: see declaration of 'IPhysicalWorld'
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\classes.h(1832): warning C4099: 'ITimer': type name first seen using 'class' now seen using 'struct'
+  c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\classes.h(1831): note: see declaration of 'ITimer'
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\base.cpp(151): warning C4101: 'getBoneName': unreferenced local variable
+c:\users\gebruiker\documents\visual studio 2017\projects\warface cheats\n1cebase1 ud\base.cpp(718): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(1216,5): warning MSB8012: TargetPath(C:\Users\Gebruiker\Documents\Visual Studio 2017\Projects\WARFACE cheats\N1ceBase1 ud\Release\Onra2.dll) does not match the Linker's OutputFile property value (C:\Users\Gebruiker\Documents\Visual Studio 2017\Projects\WARFACE cheats\N1ceBase1 ud\Onra2\Onra2.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+  Generating code
+  11 of 205 functions ( 5.4%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    4 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  DirectEngine.vcxproj -> C:\Users\Gebruiker\Documents\Visual Studio 2017\Projects\WARFACE cheats\N1ceBase1 ud\Release\Onra2.dll

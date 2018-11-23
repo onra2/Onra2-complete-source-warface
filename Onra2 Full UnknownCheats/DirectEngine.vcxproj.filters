@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="DrawMenu">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="DLL">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Menu">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{d7b30fa4-3f68-403d-abbd-9194c99d65cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protection">
+      <UniqueIdentifier>{71b14223-ac01-4237-af51-e9b7d829755a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MinHook">
+      <UniqueIdentifier>{9425ad8c-3f69-48db-a141-f9c341ef0caa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MinHook\src">
+      <UniqueIdentifier>{11ddf06d-9e19-47a6-bdb1-255ef1adecbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MinHook\src\hde">
+      <UniqueIdentifier>{c527fbb8-c16a-4117-924a-558bb23da594}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MinHook\include">
+      <UniqueIdentifier>{c47b07c0-3479-4e3f-b93e-2ed6cc6f97f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MinHook\dll_resources">
+      <UniqueIdentifier>{bfa10a2b-1b68-4a6e-8369-2c4a88ec63f3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Base.cpp">
+      <Filter>DLL</Filter>
+    </ClCompile>
+    <ClCompile Include="MinHook\src\buffer.c">
+      <Filter>MinHook\src</Filter>
+    </ClCompile>
+    <ClCompile Include="MinHook\src\hook.c">
+      <Filter>MinHook\src</Filter>
+    </ClCompile>
+    <ClCompile Include="MinHook\src\trampoline.c">
+      <Filter>MinHook\src</Filter>
+    </ClCompile>
+    <ClCompile Include="MinHook\src\hde\hde32.c">
+      <Filter>MinHook\src\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="MinHook\src\hde\hde64.c">
+      <Filter>MinHook\src\hde</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DrawMenu.h">
+      <Filter>DrawMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Includes.h">
+      <Filter>DLL</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuClasses.h">
+      <Filter>DrawMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawElements.h">
+      <Filter>DrawMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="protec\VirtualizerSDK.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="protec\VirtualizerSDK_BorlandC_inline.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="protec\VirtualizerSDK_CustomVMs.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="protec\VirtualizerSDK_CustomVMs_BorlandC_inline.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="protec\VirtualizerSDK_CustomVMs_GNU_inline.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="protec\VirtualizerSDK_CustomVMs_ICL_inline.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="protec\VirtualizerSDK_CustomVMs_LCC_inline.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="protec\VirtualizerSDK_CustomVMs_VC_inline.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="protec\VirtualizerSDK_GNU_inline.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="protec\VirtualizerSDK_ICL_inline.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="protec\VirtualizerSDK_LCC_inline.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="protec\VirtualizerSDK_VC_inline.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="MinHook\src\buffer.h">
+      <Filter>MinHook\src</Filter>
+    </ClInclude>
+    <ClInclude Include="MinHook\src\trampoline.h">
+      <Filter>MinHook\src</Filter>
+    </ClInclude>
+    <ClInclude Include="MinHook\src\hde\hde32.h">
+      <Filter>MinHook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="MinHook\src\hde\hde64.h">
+      <Filter>MinHook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="MinHook\src\hde\pstdint.h">
+      <Filter>MinHook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="MinHook\src\hde\table32.h">
+      <Filter>MinHook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="MinHook\src\hde\table64.h">
+      <Filter>MinHook\src\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="MinHook\include\MinHook.h">
+      <Filter>MinHook\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Maths.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MinHook\.editorconfig">
+      <Filter>MinHook</Filter>
+    </None>
+    <None Include="MinHook\.gitignore">
+      <Filter>MinHook</Filter>
+    </None>
+    <None Include="MinHook\README.md">
+      <Filter>MinHook</Filter>
+    </None>
+    <None Include="MinHook\dll_resources\MinHook.def">
+      <Filter>MinHook\dll_resources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="MinHook\AUTHORS.txt">
+      <Filter>MinHook</Filter>
+    </Text>
+    <Text Include="MinHook\LICENSE.txt">
+      <Filter>MinHook</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MinHook\dll_resources\MinHook.rc">
+      <Filter>MinHook\dll_resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

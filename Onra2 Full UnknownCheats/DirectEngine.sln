@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DirectEngine", "DirectEngine.vcxproj", "{4A0AAB08-3AEC-491A-89C4-86ED86EDF50C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A0AAB08-3AEC-491A-89C4-86ED86EDF50C}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{4A0AAB08-3AEC-491A-89C4-86ED86EDF50C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4A0AAB08-3AEC-491A-89C4-86ED86EDF50C}.Debug|Win32.Build.0 = Debug|Win32
+		{4A0AAB08-3AEC-491A-89C4-86ED86EDF50C}.Debug|x64.ActiveCfg = Debug|Win32
+		{4A0AAB08-3AEC-491A-89C4-86ED86EDF50C}.Release|Any CPU.ActiveCfg = Release|Win32
+		{4A0AAB08-3AEC-491A-89C4-86ED86EDF50C}.Release|Win32.ActiveCfg = Release|Win32
+		{4A0AAB08-3AEC-491A-89C4-86ED86EDF50C}.Release|Win32.Build.0 = Release|Win32
+		{4A0AAB08-3AEC-491A-89C4-86ED86EDF50C}.Release|x64.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {596237FA-8698-4B2A-8804-BAA7361270E7}
+	EndGlobalSection
+EndGlobal
