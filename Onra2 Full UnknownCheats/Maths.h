@@ -43,15 +43,15 @@ bool NumberValid(const float& x)
 	return !invalid;
 }
 
-float isqrt_tpl(float op) { return 1.0f / sqrt(op); }
-float fabs_tpl(float op) { return fabs(op); }
-void cry_sincos(float angle, float* pSin, float* pCos) { *pSin = (sin(angle));  *pCos = (cos(angle)); }
-void sincos(float angle, float* pSin, float* pCos) { cry_sincos(angle, pSin, pCos); }
-float isqrt_safe_tpl(float op) { return 1.0f / sqrt(op + (float)DBL_MIN); }
+inline float isqrt_tpl(float op) { return 1.0f / sqrt(op); }
+inline float fabs_tpl(float op) { return fabs(op); }
+inline void cry_sincos(float angle, float* pSin, float* pCos) { *pSin = (sin(angle));  *pCos = (cos(angle)); }
+inline void sincos(float angle, float* pSin, float* pCos) { cry_sincos(angle, pSin, pCos); }
+inline float isqrt_safe_tpl(float op) { return 1.0f / sqrt(op + (float)DBL_MIN); }
 
-float asin_tpl(float op) { return asin(clamp(op, -1.0f, +1.0f)); }
-float g_PI = 3.14159265358979323846264338327950288419716939937510f;
-float atan2_tpl(float op1, float op2) { return atan2(op1, op2); }
+inline float asin_tpl(float op) { return asin(clamp(op, -1.0f, +1.0f)); }
+inline float g_PI = 3.14159265358979323846264338327950288419716939937510f;
+inline float atan2_tpl(float op1, float op2) { return atan2(op1, op2); }
 
 struct Vec3
 {
@@ -500,7 +500,7 @@ class Quat
 		v.x = (vx*cy - v.z*sy); v.y = (w*sy + vy*cy); v.z = (v.z*cy + vx*sy); w = (w*cy - vy*sy);
 	}
 
-	Quat Quat::CreateRotationXYZ(const Ang3 &a)
+	Quat CreateRotationXYZ(const Ang3 &a)
 	{
 		assert(a.IsValid());
 		Quat q; 
@@ -509,7 +509,7 @@ class Quat
 		return q;
 	}
 
-	void Quat::SetRotationXYZ(const Ang3 &a)
+	void SetRotationXYZ(const Ang3 &a)
 	{
 		assert(a.IsValid());
 		float sx, cx;  sincos((a.x*0.5f), &sx, &cx);
@@ -521,7 +521,7 @@ class Quat
 		v.z = sz*cy*cx - cz*sy*sx;
 	}
 
-	void Quat::SetRotationZ(float r)
+	void SetRotationZ(float r)
 	{
 		float s, c;
 		sincos((r*0.5f), &s, &c);
@@ -531,7 +531,7 @@ class Quat
 		v.z = s;
 	}
 
-	Quat Quat::CreateRotationZ(float r)
+	Quat CreateRotationZ(float r)
 	{
 		Quat q;
 		q.SetRotationZ(r);
