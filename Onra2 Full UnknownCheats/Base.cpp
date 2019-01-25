@@ -28,91 +28,6 @@ EndScene EndScene_orig = 0;
 typedef HRESULT(APIENTRY *Reset)(LPDIRECT3DDEVICE9, D3DPRESENT_PARAMETERS*);
 HRESULT APIENTRY Reset_hook(LPDIRECT3DDEVICE9, D3DPRESENT_PARAMETERS*);
 Reset Reset_orig = 0;
-
-void WriteLogFile(const char *LogText, ...)
-{
-	FILE *MyLog;
-	fopen_s(&MyLog, "C://Onra2//LOGFILE.log", "a");
-	
-
-	char Buffer[1024];
-	va_list ArgList;
-	va_start(ArgList, LogText);
-	vsnprintf_s(Buffer, 1023, LogText, ArgList);
-	va_end(ArgList);
-
-	if (MyLog)
-	{
-		fprintf(MyLog, "%s", Buffer);
-		fclose(MyLog);
-	}
-}
-
-void Log(const char *LogText, ...)
-{
-	char Buffer[1024];
-	va_list ArgList;
-	va_start(ArgList, LogText);
-	vsnprintf_s(Buffer, 1023, LogText, ArgList);
-	va_end(ArgList);
-
-	WriteLogFile("%s\n", Buffer);
-}
-
-#include <WinInet.h>
-#pragma comment ( lib, "Wininet.lib" )
-char *GDFI(std::string szURL, int iSize)
-{
-	char *szBuffer = new char[iSize];
-
-	HINTERNET hInternet = InternetOpen(NULL, INTERNET_OPEN_TYPE_PRECONFIG, NULL, NULL, 0);
-	HINTERNET hConnect = InternetOpenUrl(hInternet, szURL.c_str(), NULL, NULL, NULL, 0);
-
-	DWORD dwRead = 0;
-	while (InternetReadFile(hConnect, szBuffer, iSize - 1, &dwRead))
-	{
-		if (dwRead == '\0')break;
-		memset(&szBuffer[dwRead], 0, 1);
-	}
-	InternetCloseHandle(hConnect);
-	InternetCloseHandle(hInternet);
-
-	return szBuffer;
-}
-
-char *re(char *str, const char *f, const char *t) {
-	char *tmpPtr = strstr(str, f);
-
-	if (tmpPtr != 0 && strlen(f) >= strlen(t)) {
-		size_t sizeDiff = strlen(f) - strlen(t);
-
-		strncpy(tmpPtr, t, strlen(t));
-
-		if (sizeDiff > 0)
-			for (tmpPtr += strlen(t); *tmpPtr != '\0'; tmpPtr++)
-				*tmpPtr = *(tmpPtr + sizeDiff);
-
-	}
-	else
-		return 0;
-
-	return str;
-}
-
-DWORD GetKey()
-{
-	DWORD SerialNum;
-	char directory[1024];
-	GetSystemWindowsDirectory(directory, 1024);
-
-	re(directory, "WINDOWS", "");
-	re(directory, "windows", "");
-	re(directory, "Windows", "");
-
-	GetVolumeInformationA(directory, 0, 0, &SerialNum, 0, 0, 0, 0);
-
-	return SerialNum;
-}
 #pragma endregion
 
 #pragma region utilities
@@ -559,32 +474,11 @@ DWORD pid;
 DWORD Base;
 extern "C" void totallynothing()
 {
-	VIRTUALIZER_START
 	pSSGE = (SSystemGlobalEnvironment*)(*(DWORD*)(SSystemGlobalEnvironment__GlobalAdr));
 	p3DEngine = pSSGE->p3DEngine;
 	pIGame = pSSGE->pIGame;
 	pIcvar = pIGame->GetICvar();
 	pFrameWork = IGameFramework::GetGameFramework();
-
-	#pragma region update
-	//if (!UpdateSsystemGlobalEnvironment)
-	//{
-	//	DWORD SSystemGlobalEnvironmentAddress;
-	//	SSystemGlobalEnvironmentAddress = FindPattern(0x401000, 0x20CB000, (PBYTE)"\x8B\xE5\x5D\xC2\x08\x00\xA1\x00\x00\x00\x00\x68\x00\x00\x00\x00\x8B\x48", "xxxxxxx????x????xx");
-	//	Log("Base Address: 0x%08X", SSystemGlobalEnvironmentAddress);
-	//	SSystemGlobalEnvironmentAddress = *(DWORD*)(SSystemGlobalEnvironmentAddress + 0x2A);
-	//	Log("SSystemGlobalEnvironment: 0x%08X", SSystemGlobalEnvironmentAddress);
-	//	UpdateSsystemGlobalEnvironment = true;
-	//}
-	//if (!UpdateIGameFramework)
-	//{
-	//	DWORD IGameFrameworkAddress;
-	//	IGameFrameworkAddress = FindPattern(0x401000, 0x20CB000, (PBYTE)"\x8B\xE5\x5D\xC2\x08\x00\xA1\x00\x00\x00\x00\x68\x00\x00\x00\x00\x8B\x48", "xxxxxxx????x????xx");
-	//	IGameFrameworkAddress = *(DWORD*)(IGameFrameworkAddress + 0x7);
-	//	Log("IGameFramework: 0x%08X", IGameFrameworkAddress);
-	//	UpdateIGameFramework = true;
-	//}
-	#pragma endregion
 
 	while (true)
 	{
@@ -598,41 +492,6 @@ extern "C" void totallynothing()
 		pIcvar->ACMemLog(OFF);
 		pIcvar->ACMemScan(OFF);
 		pIcvar->ACPatternScan(OFF);
-		//uintptr_t KickBypass1Address = FindPointer(pHandle, BypassBase, OffsetsKickBypass1);
-		//uintptr_t KickBypass2Address = FindPointer(pHandle, BypassBase, OffsetsKickBypass2);
-		//uintptr_t KickBypass3Address = FindPointer(pHandle, BypassBase, OffsetsKickBypass3);
-		//uintptr_t KickBypass4Address = FindPointer(pHandle, BypassBase, OffsetsKickBypass4);
-		//uintptr_t KickBypassProtect1 = FindPointer(pHandle, BypassBase, OffsetsBypassProtec1);
-		//uintptr_t KickBypassProtect2 = FindPointer(pHandle, BypassBase, OffsetsBypassProtec11);
-		//uintptr_t KickBypassProtect3 = FindPointer(pHandle, BypassBase, OffsetsBypassProtec111);
-		//uintptr_t KickBypassProtect4 = FindPointer(pHandle, BypassBase, OffsetsBypassProtec2);
-		//uintptr_t KickBypassProtect5 = FindPointer(pHandle, BypassBase, OffsetsBypassProtec3);
-		//uintptr_t KickBypassProtect6 = FindPointer(pHandle, BypassBase, OffsetsBypassProtec4);
-		//uintptr_t KickBypassProtect7 = FindPointer(pHandle, BypassBase, OffsetsBypassProtec5);
-		//uintptr_t KickBypassProtect8 = FindPointer(pHandle, BypassBase, OffsetsBypassProtec6);
-		//uintptr_t KickBypassProtect9 = FindPointer(pHandle, BypassBase, OffsetsBypassProtec7);
-		//uintptr_t ScreenAddress = FindPointer(pHandle, BypassBase, OffsetsScreen);
-		//uintptr_t LogAddress = FindPointer(pHandle, BypassBase, OffsetsLogs);
-		//uintptr_t QueryAddress = FindPointer(pHandle, BypassBase, OffsetsByquery1);
-		//uintptr_t HWIDAddress = FindPointer(pHandle, BypassBase, Offsetshwidban);
-		//int etein = 0;
-		//WriteProcessMemory(pHandle, (BYTE*)KickBypass1Address, &etein, sizeof(etein), 0);
-		//WriteProcessMemory(pHandle, (BYTE*)KickBypass2Address, &etein, sizeof(etein), 0);
-		//WriteProcessMemory(pHandle, (BYTE*)KickBypass3Address, &etein, sizeof(etein), 0);
-		//WriteProcessMemory(pHandle, (BYTE*)KickBypass4Address, &etein, sizeof(etein), 0);
-		//WriteProcessMemory(pHandle, (BYTE*)KickBypassProtect1, &etein, sizeof(etein), 0);
-		//WriteProcessMemory(pHandle, (BYTE*)KickBypassProtect2, &etein, sizeof(etein), 0);
-		//WriteProcessMemory(pHandle, (BYTE*)KickBypassProtect3, &etein, sizeof(etein), 0);
-		//WriteProcessMemory(pHandle, (BYTE*)KickBypassProtect4, &etein, sizeof(etein), 0);
-		//WriteProcessMemory(pHandle, (BYTE*)KickBypassProtect5, &etein, sizeof(etein), 0);
-		//WriteProcessMemory(pHandle, (BYTE*)KickBypassProtect6, &etein, sizeof(etein), 0);
-		//WriteProcessMemory(pHandle, (BYTE*)KickBypassProtect7, &etein, sizeof(etein), 0);
-		//WriteProcessMemory(pHandle, (BYTE*)KickBypassProtect8, &etein, sizeof(etein), 0);
-		//WriteProcessMemory(pHandle, (BYTE*)KickBypassProtect9, &etein, sizeof(etein), 0);
-		//WriteProcessMemory(pHandle, (BYTE*)ScreenAddress, &etein, sizeof(etein), 0);
-		//WriteProcessMemory(pHandle, (BYTE*)LogAddress, &etein, sizeof(etein), 0);
-		//WriteProcessMemory(pHandle, (BYTE*)QueryAddress, &etein, sizeof(etein), 0);
-		//WriteProcessMemory(pHandle, (BYTE*)HWIDAddress, &etein, sizeof(etein), 0);
 		IActor *MePlayer = NULL;
 
 		if (pFrameWork && pFrameWork->GetClientActor(&MePlayer))
@@ -763,7 +622,6 @@ extern "C" void totallynothing()
 			}
 		}
 	}
-	VIRTUALIZER_END
 }
 #pragma endregion
 
